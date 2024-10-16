@@ -11,18 +11,20 @@ import java.util.Scanner;
  */
 public class Mtp2024 {
 
+    public static Scanner sc = new Scanner(System.in);
+    
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
         
-        int n1, n2;
+        System.out.print("n1: ");
+        Double n1 = sc.nextDouble();
+        System.out.print("\nn2: ");
+        Double n2 = sc.nextDouble();
         
-        System.out.print("Número um: ");
-        n1 = input.nextInt();
-        System.out.print("\nNúmero dois: ");
-        n2 = input.nextInt();
+        Calculadora calc = new Calculadora(n1, n2);
         
-        System.out.print("\nSoma: " + (n1 + n2));
-        
-        input.close();
+        System.out.println(calc.somar());
+        System.out.println(calc.subtrair());
+        System.out.println(calc.multiplicar());
+        System.out.println(calc.dividir());
     }
 }
